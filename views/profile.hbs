@@ -1,0 +1,22 @@
+<a href="/">Back to main</a>
+
+<h1>Profile</h1>
+
+<div class="profile-container">
+
+  <div class="bio-container">
+    <h3>Name: {{user.username}}</h3>
+    <h3>Bio:</h3>
+  </div>
+
+  <img class="profile-pic" src="{{user.profilePic}}" alt="">
+
+</div>
+
+<button><a href="/profile/edit">EDIT PROFILE</a></button>
+
+<div class="image-container">
+  {{#each user.images}}
+  <img class="images" src="{{this}}" alt="">
+  {{/each}}
+</div>
