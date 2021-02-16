@@ -7,7 +7,10 @@ const userSchema = new Schema({
     unique: true,
   },
   password: String,
-  profilePic: String,
+  bio: String,
+  profilePic: {
+    type: String,
+  },
   images: [String]
 });
 

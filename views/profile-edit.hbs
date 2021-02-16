@@ -2,20 +2,14 @@
 
 <h2>edit your profile pic!</h2>
 
-<form action='/profile/upload-profile-pic' method='POST' enctype="multipart/form-data">
-
-  <label for=''>Select your profile pic</label>
-  <input type='file' name='imageUrl' accept="image/png, image/jpg">
-
-  <button type='submit'>Submit</button>
+<form action="/profile/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="imageUrl" accept="image/png, image/jpg">
+  <button type="submit">Submit</button>  
 </form>
 
-<h2>add cool pics!</h2>
+<h2>Select some images</h2>
 
-<form action='/profile/add-image' method='POST' enctype="multipart/form-data">
-
-  <label for=''>Select your profile pic</label>
-  <input type='file' name='imageUrl' accept="image/png, image/jpg">
-
-  <button type='submit'>Submit</button>
+<form action="/profile/pictures" method="POST" enctype="multipart/form-data">
+  <input type="file" name="picUrl" accept="image/png, image/jpg">
+  <button type="submit">Submit</button>  
 </form>

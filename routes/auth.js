@@ -19,7 +19,7 @@ router.get('/signup', shouldNotBeLoggedIn, (req, res) => {
 });
 
 router.post('/signup', shouldNotBeLoggedIn, (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, bio } = req.body;
 
   if (!username) {
     return res.status(400).render('signup', { errorMessage: 'Please provide your username' });
@@ -55,7 +55,8 @@ router.post('/signup', shouldNotBeLoggedIn, (req, res) => {
       .then(hashedPassword => {
         return User.create({
           username,
-          password: hashedPassword
+          password: hashedPassword,
+          bio
         });
       })
       .then(user => {
